@@ -5,4 +5,4 @@ angular.module('restfullConsumerApp').config(function($routeProvider, $locationP
         templateUrl: 'views/astonHR.html',
         controller: 'astonHRController as astonHR'
         });
-)};
+});
