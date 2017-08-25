@@ -4,5 +4,4 @@ angular.module('restfullConsumerApp')
 function IndexController(EmployeeAPIService,EmployeeObjService) {
 
 
-
 }//end of IndexController Function

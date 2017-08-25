@@ -14,7 +14,12 @@ function IndexController(EmployeeAPIService,EmployeeObjService) {
     console.log('whats the response',ctrl.employeeData);
   });
 
-  employee = EmployeeObjService.createEmployeeObj("NEW", "lastNameString",
+  EmployeeObjService.createAddressObj(idInt, versionInt, "typeString", "streetAddressString"
+                                    , "cityString", "stateString", "zipcodeString");
+  EmployeeObjService.createProjectObj(idInt, versionInt, "projectNameString",
+                                      "clientNameString" , 12344);
+
+  employee = EmployeeObjService.createEmployeeObj(idInt, versionInt, "NEW", "lastNameString",
                             "backgroundString");
   //test to see if employee object was created from EmployeeObjService
   console.log('what is the employee object created',employee);
@@ -29,9 +34,14 @@ function IndexController(EmployeeAPIService,EmployeeObjService) {
     console.log('Employee deleted?: ', response);
   });
 
-  EmployeeAPIService.deleteProjectData(1).then(function functionName(response) {
+  EmployeeAPIService.deleteProjectData(1).then(function (response) {
     //test if project Deleted response from EmployeeAPIService
     console.log('Project Deleted?: ', response);
+  });
+
+  EmployeeAPIService.deleteAddressData(1).then(function(response) {
+    //test if address deleted repsonse from EmployeeAPIService
+    console.log('Address Deleted?: ', response);
   });
 
 }

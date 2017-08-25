@@ -47,10 +47,10 @@ function EmployeeAPIService($http) {
   };
 
   //delete project info
-  this.deleteProjectData = function(id) {
+  this.deleteProjectData = function(projId) {
     return $http({
       method: 'DELETE',
-      url: apiURL + projectURL + id
+      url: apiURL + projectURL + projId
     }).then(function successCallback() {
         //returns response
         return 'data deleted';
@@ -60,10 +60,10 @@ function EmployeeAPIService($http) {
   };
 
   //delete address info
-  this.deleteProjectData = function(id) {
+  this.deleteAddressData = function(addId) {
     return $http({
       method: 'DELETE',
-      url: apiURL + addressURL + id
+      url: apiURL + addressURL + addId
     }).then(function successCallback() {
         //returns response
         return 'data deleted';
